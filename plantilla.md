@@ -1,15 +1,3 @@
-# Sistema de Copias de Seguridad Automatizadas Multicapa
-
-## 1. Arquitectura General del Sistema
-
-- Nivel 1: ______________________________________
-- Nivel 2: ______________________________________
-- Nivel 3: ______________________________________
-
-_(Explica brevemente la función de cada nivel. Puedes añadir un esquema o diagrama ASCII si lo deseas.)_
-
----
-
 ## 2. Configuración del Nivel 1: PCs Individuales
 
 ### a. Selección de software
@@ -89,36 +77,6 @@ rsync -av /tus/archivos /mnt/backup
 
 ---
 
-## 3. Configuración del Nivel 2: Servidor Local Primario
-
-### a. Tipo de hardware elegido
-- Opción: NAS / Ordenador (elige uno)
-- Marca/modelo (si aplica): ________________
-- Sistema operativo: ________________________
-
-### b. Tipo de RAID
-- Elegido: RAID 1 / RAID 5 / RAID 10  
-- Justificación:
-
-### c. Software de gestión
-- Software elegido: __________________________  
-- Función principal: __________________________
-
----
-
-## 4. Configuración del Nivel 3: Servidor Secundario Remoto
-
-### a. Tipo de servidor remoto
-- Opción elegida: NAS remoto / Nube / PC remoto  
-- Justificación:
-
-### b. Seguridad de la sincronización
-- ¿Cómo se programa la sincronización?
-- ¿Qué cifrado se usa?
-- ¿Se puede activar doble autenticación?
-
----
-
 ## 5. Automatización del Proceso
 
 - Script de verificación: _(pega o enlaza un ejemplo)_
@@ -186,29 +144,3 @@ Backups no críticos       (archivos estáticos)	Trimestral
 Entornos regulados        (HIPAA, GDPR) Mensual (obligatorio)
 
 ---
-
-## 6. Justificación del uso de RAID
-
-- ¿Por qué no sustituye al backup?
-- ¿Qué pasa si solo tenemos RAID?
-
----
-
-## 7. Resumen de Software Recomendado
-
-| Función                        | Software Recomendado     |
-|-------------------------------|--------------------------|
-| Gestión centralizada          |                          |
-| Sincronización entre servidores|                          |
-| Monitorización                |                          |
-
-_(Puedes añadir más si lo crees necesario)_
-
----
-
-## Bibliografía / Fuentes consultadas
-
-- Fuente 1: ______________________
-- Fuente 2: ______________________
-- ...
-
