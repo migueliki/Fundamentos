@@ -13,6 +13,7 @@ _(Explica brevemente la función de cada nivel. Puedes añadir un esquema o diag
 ## 2. Configuración del Nivel 1: PCs Individuales
 
 ### a. Selección de software
+
 - Windows: 
 Veeam: Soporta copias incrementales, compresión y cifrado. Ideal para backups empresariales.
 Cobian: Open-source, permite programación flexible y es liviano.
@@ -44,18 +45,21 @@ Abre Veeam y selecciona "Backup Job" → "Entire Computer" (o "File Level" para 
 En "Schedule", elige "Weekly" y marca el día (ej. Domingo).
 Asegúrate de seleccionar "Active Full Backup" (no incremental).
 Configura la hora (ej. 23:00) y guarda.
+
 2. macOS (Time Machine o Carbon Copy Cloner)
 Time Machine: Ya hace copias completas automáticas cuando el disco está conectado (no necesita configuración adicional).
 Carbon Copy Cloner:
 Crea una nueva tarea → "Clone" (origen y destino).
 En "Schedule", elige "Weekly" y el día.
 Selecciona "Delete older backups" para evitar saturar el disco.
+
 3. Linux (Timeshift o rsync)
 Timeshift:
 Abre Timeshift → "Schedule" → Activa "Weekly".
 Elige el día y hora (ej. Domingo a las 22:00).
 Asegúrate de que el tipo de backup sea "RSync" (para copias completas eficientes).
 rsync + cron:
+
 Edita crontab (crontab -e) y añade:
 0 22 * * 0 rsync -a --delete /ruta/origen /ruta/backup_completo
 (Se ejecutará todos los domingos a las 22:00).
@@ -67,6 +71,7 @@ Edita crontab (crontab -e) y añade:
 Crear carpeta principal: /backups
 Dentro, hacer una carpeta por PC:
 /backups/PC1, /backups/PC2, etc.
+
 2. En cada PC:
 Windows (Veeam):
 Elegir "Backup a carpeta compartida"
