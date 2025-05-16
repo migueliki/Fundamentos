@@ -61,14 +61,17 @@ Dentro, hacer una carpeta por PC:
 /backups/PC1, /backups/PC2, etc.
 
 2. En cada PC:
+
 Windows (Veeam):
 Elegir "Backup a carpeta compartida"
 Poner ruta: \\IP_servidor\backups\NombrePC
 Poner usuario/contraseña del servidor si pide
+
 Mac (Time Machine):
 Ir a Time Machine > Seleccionar disco
 Elegir "Conectar servidor"
 Poner: smb://IP_servidor/backups/NombreMac
+
 Linux (Terminal):
 Montar carpeta del servidor:
 sudo mount -t cifs //IP_servidor/backups/NombreLinux /mnt/backup -o user=usuario
